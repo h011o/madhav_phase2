@@ -37,13 +37,13 @@ Then I had to exploit the potential vulnerability. Jinja2 uses Python's Method R
 
 <img width="816" height="205" alt="image" src="https://github.com/user-attachments/assets/5e0aeaa6-9675-4f45-b690-c670200bda70" />
 
-I used the command ``{{ ''.__class__.__mro__[1].__subclasses__() }}`` which provided me with a list of all classes loaded in memory. I can see that subprocess.Popen is one of the classes. 
+I used the command ``{{ ''.__class__.__mro__[1].__subclasses__() }}`` which provided me with a list of all classes loaded in memory. 
 
-``subprocess.Popen`` is a Python class that allows you to run operating system commands from within Python code. This is important in this challenge because I can't access the servers command line, but through SSTI I can find subprocess.Popen using which I can execute OS commands through the template. 
+Python's `popen` functions allow you to run operating system commands from within Python code. This is important in this challenge because I can't access the server's command line, but through SSTI I can access these functions to execute OS commands through the template.
 
 <img width="1835" height="992" alt="image" src="https://github.com/user-attachments/assets/29ee6d8a-3dbc-436f-8028-dc0acee56b09" />
 
-I then looked for examples on how to use subprocess.Popen commands. 
+I then looked for examples on how to use ``os.popen()`` commands.
 
 <img width="1400" height="458" alt="image" src="https://github.com/user-attachments/assets/de2e20ba-a90d-42e7-a6aa-60c41cc0799f" />
 
