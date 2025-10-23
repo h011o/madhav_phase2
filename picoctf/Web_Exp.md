@@ -11,7 +11,7 @@ This challenge provided us a website with a text box which announces anything yo
 
 <img width="796" height="304" alt="image" src="https://github.com/user-attachments/assets/602b93eb-65b2-4ca1-9ded-faf919e31ee3" />
 
-Announcements are output in the /announcements page, url manipulation also resulted in no outputs. 
+Announcements are output in the /announcements page, manipulation of the url to find other pages resulted in errors.
 
 The name of challenge is SSTI1, a quick google search about SSTI told me it stands for Server-side template injection which occurs when attackers can inject malicious code into a template that is executed server-side. 
 
