@@ -43,7 +43,7 @@ I used the command ``{{ ''.__class__.__mro__[1].__subclasses__() }}`` which prov
 
 <img width="1835" height="992" alt="image" src="https://github.com/user-attachments/assets/29ee6d8a-3dbc-436f-8028-dc0acee56b09" />
 
-I then looked for the syntax for subprocess.Popen commands. 
+I then looked for examples on how to use subprocess.Popen commands. 
 
 <img width="1400" height="458" alt="image" src="https://github.com/user-attachments/assets/de2e20ba-a90d-42e7-a6aa-60c41cc0799f" />
 
