@@ -7,11 +7,11 @@
 
 ## My solve
 
-This challenge provided us with a website where you can announce whatever you want. I checked the source code for the website, which provided no hints.
+This challenge provided us with a website with a text box which announces anything you input. I checked the source code for the website, which provided no hints.
 
 <img width="796" height="304" alt="image" src="https://github.com/user-attachments/assets/602b93eb-65b2-4ca1-9ded-faf919e31ee3" />
 
-Announcements are outputted in the /announcements page, url manipulation resulted in no outputs. 
+Announcements are outputted in the /announcements page, url manipulation also resulted in no outputs. 
 
 The name of challenge is SSTI1, a quick google search about SSTI told me it stands for Server-side template injection which occurs when attackers can inject malicious code into a template that is executed server-side. 
 
