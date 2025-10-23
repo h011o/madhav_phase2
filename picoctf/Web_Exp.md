@@ -30,7 +30,7 @@ The next step was to identify the template engine, I inputted the payload ``{{7*
 The next step was to exploit the potential vulnerability. Jinja2 uses Python's Method Resolution Order (MRO) for method lookups within templates. MRO is the order in which Python searches classes and methods when resolving calls.
 When a variable or method is referenced in {{ }}, Jinja2 will evaluate and return its value. 
 
-I used the command {{ ''.__class__.__mro__[1].__subclasses__() }} which provided me with a list of all classes loaded in memory. 
+I used the command ``{{ ''.__class__.__mro__[1].__subclasses__() }}`` which provided me with a list of all classes loaded in memory. 
 
 <img width="1835" height="992" alt="image" src="https://github.com/user-attachments/assets/29ee6d8a-3dbc-436f-8028-dc0acee56b09" />
 
