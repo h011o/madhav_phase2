@@ -39,9 +39,9 @@ Then I had to exploit the potential vulnerability. Jinja2 uses Python's Method R
 
 I used the command ``{{ ''.__class__.__mro__[1].__subclasses__() }}`` which provided me with a list of all classes loaded in memory. 
 
-Python's `popen` functions allow you to run operating system commands from within Python code. This is important in this challenge because I can't access the server's command line, but through SSTI I can access these functions to execute OS commands through the template.
-
 <img width="1835" height="992" alt="image" src="https://github.com/user-attachments/assets/29ee6d8a-3dbc-436f-8028-dc0acee56b09" />
+
+Python's `popen` functions allow you to run operating system commands from within Python code. This is important in this challenge because I can't access the server's command line, but through SSTI I can access these functions to execute OS commands through the template.
 
 I then looked for examples on how to use ``os.popen()`` commands.
 
