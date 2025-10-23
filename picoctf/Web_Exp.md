@@ -68,7 +68,7 @@ picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_9451989d}
 ```
 
 ## References 
-https://portswigger.net/web-security/server-side-template-injection
-(https://retherszu.github.io/vulnerabilities/web/server-side-template-injection/ssti-in-jinja2.html)
-https://onsecurity.io/article/server-side-template-injection-with-jinja2/
+> https://portswigger.net/web-security/server-side-template-injection
+> https://retherszu.github.io/vulnerabilities/web/server-side-template-injection/ssti-in-jinja2.html
+> https://onsecurity.io/article/server-side-template-injection-with-jinja2/
 
