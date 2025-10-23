@@ -7,7 +7,7 @@
 
 ## My solve
 
-This challenge provided us with a website with a text box which announces anything you input. I checked the source code for the website, which provided no hints.
+This challenge provided us a website with a text box which announces anything you input. I checked the source code for the website, which provided no hints.
 
 <img width="796" height="304" alt="image" src="https://github.com/user-attachments/assets/602b93eb-65b2-4ca1-9ded-faf919e31ee3" />
 
