@@ -3,7 +3,7 @@
 2. Web gauntlet
 3. Cookies
 
-## SSTI1
+## 1.SSTI1
 
 ## My solve
 
@@ -56,14 +56,10 @@ I then tried using ``{{request.application.__globals__.__builtins__.__import__('
 This finally gave me the flag.
 
 **Flag:** 
+
 ```bash
 picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_9451989d}
 ```
-
-## What I learned
-
-
-
 
 ## References 
 https://portswigger.net/web-security/server-side-template-injection
