@@ -107,8 +107,7 @@ Finally after changing the value multiple times, the flag was found on value 18
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/54303e79-b3e1-4c02-aeeb-9427677c7ff8" />
 
-** Flag: ** 
-
+**Flag:**
 ```bash
 picoCTF{3v3ry1_l0v3s_c00k135_064663be}
 ```
