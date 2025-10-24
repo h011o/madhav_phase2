@@ -1,4 +1,4 @@
-# Challenges
+<img width="977" height="453" alt="image" src="https://github.com/user-attachments/assets/2e515086-adec-4677-ad85-ccfb4fb12631" /># Challenges
 1. SSTI1
 2. Web gauntlet
 3. Cookies
@@ -74,4 +74,38 @@ picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_9451989d}
 > 1) https://portswigger.net/web-security/server-side-template-injection
 > 2) https://retherszu.github.io/vulnerabilities/web/server-side-template-injection/ssti-in-jinja2.html
 > 3) https://onsecurity.io/article/server-side-template-injection-with-jinja2/
+
+## 2. Cookies
+
+## My Solve
+
+This challenge took me to a web-interface where I could "search" for cookies. 
+
+<img width="1142" height="695" alt="image" src="https://github.com/user-attachments/assets/260c7fa2-968a-4226-9213-79aaae159928" />
+
+On entering the suggested prompt (snickerdoodle), I got the following response: 
+
+<img width="977" height="453" alt="image" src="https://github.com/user-attachments/assets/9e01e8c0-9177-4823-b24a-2269c5d3f83b" />
+
+Entering other prompts resulted in the message `` That doesn't appear to be a valid cookie. ``
+
+I then opened developer tools to take a look at what cookies appeared to be shared in the Network tab.
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4a2029d5-0784-46ff-8e78-1e3572476f75" />
+
+I noticed that there was only one cookie shared and its value was 0. I then headed over to Storage and modified the value of cookie to 1 - which gave me the following output. 
+
+<img width="1900" height="747" alt="image" src="https://github.com/user-attachments/assets/c08bb4d6-f9bb-4849-b16a-05cb0d9667d8" />
+
+On repeatedly changing the value of the cookie multiple times, the output kept changing, giving different types of cookie each time.
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/164dfb5a-0efb-4894-a26b-bc86151ffb96" />
+
+I also noticed that the value was -1 everytime the cookie wasn't found, modifying it to other negative values resulted in the same.
+
+Finally after changing, the value multiple times, the flag was found on value 18
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/54303e79-b3e1-4c02-aeeb-9427677c7ff8" />
+
+
 
