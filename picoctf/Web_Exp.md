@@ -89,7 +89,7 @@ On entering the suggested prompt (snickerdoodle), I got the following response:
 
 Entering other prompts resulted in the message `` That doesn't appear to be a valid cookie. ``
 
-I then opened developer tools to take a look at what cookies appeared to be shared in the Network tab.
+I then opened developer tools to take a look at what cookies appeared to be shared
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4a2029d5-0784-46ff-8e78-1e3572476f75" />
 
