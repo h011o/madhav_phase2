@@ -93,15 +93,15 @@ I then opened developer tools to take a look at what cookies appeared to be shar
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4a2029d5-0784-46ff-8e78-1e3572476f75" />
 
-I noticed that there was only one cookie shared and its value was 0. I then headed over to Storage and modified the value of cookie to 1 - which gave me the following output. 
+I noticed that there was only one cookie shared and its value was 0. I then headed over to Storage and modified the value of cookie to `1` - which gave me the following output. 
 
 <img width="1900" height="747" alt="image" src="https://github.com/user-attachments/assets/c08bb4d6-f9bb-4849-b16a-05cb0d9667d8" />
 
-On repeatedly changing the value of the cookie multiple times, the output kept changing, giving different types of cookie each time.
+On repeatedly changing the value of the cookie multiple times, the output kept changing, giving different types of *cookie* each attempt.
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/164dfb5a-0efb-4894-a26b-bc86151ffb96" />
 
-I also noticed that the value was -1 everytime the cookie wasn't found, modifying it to other negative values resulted in the same.
+I also noticed that the value was `-1` everytime the cookie wasn't found, modifying it to other negative values resulted in the same.
 
 Finally after changing the value multiple times, the flag was found on value 18
 
