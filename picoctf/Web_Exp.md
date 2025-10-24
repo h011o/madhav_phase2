@@ -103,7 +103,7 @@ On repeatedly changing the value of the cookie multiple times, the output kept c
 
 I also noticed that the value was `-1` everytime the cookie wasn't found, modifying it to other negative values resulted in the same.
 
-Finally after changing the value multiple times, the flag was found on value 18
+Finally after changing the value multiple times, the flag was found on value `18`
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/54303e79-b3e1-4c02-aeeb-9427677c7ff8" />
 
