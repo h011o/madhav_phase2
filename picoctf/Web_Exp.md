@@ -1,6 +1,6 @@
 # Challenges
-1. SSTI1
-2. Cookies
+1. SSTI1.
+2. Cookies.
 3. Web gauntlet.
 
 ## 1. SSTI1
