@@ -1,4 +1,4 @@
-<img width="869" height="489" alt="image" src="https://github.com/user-attachments/assets/ad138887-7f8a-4864-811d-371554b858c7" /># Challenges
+# Challenges
 1. SSTI1
 2. Cookies
 3. Web gauntlet
