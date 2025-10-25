@@ -1,7 +1,7 @@
-# Challenges
+<img width="869" height="489" alt="image" src="https://github.com/user-attachments/assets/ad138887-7f8a-4864-811d-371554b858c7" /># Challenges
 1. SSTI1
-2. Web gauntlet
-3. Cookies
+2. Cookies
+3. Web gauntlet
 
 ## 1. SSTI1
 
@@ -111,6 +111,67 @@ Finally after changing the value multiple times, the flag was found on value `18
 ```bash
 picoCTF{3v3ry1_l0v3s_c00k135_064663be}
 ```
+# 3. Web Gauntlet
+
+> Can you beat the filters?
+Log in as admin http://shape-facility.picoctf.net:55438/ http://shape-facility.picoctf.net:55438/filter.php
+
+## Solution:
+
+This challenge provides us with two links, and the first one takes us to a web interface with a login screen while the second one seems to be just a blank page with `` Round1: or``.
+
+<img width="704" height="439" alt="image" src="https://github.com/user-attachments/assets/39928122-a367-42f5-8b58-b08a0b6d66c1" />
+
+My first thought on seeing the login was to try basic SQL injection using ` admin' OR '1=1 ` but it led to no result, the page just refreshed itself. I then entered some random values to see where it would take me. 
+
+<img width="1252" height="548" alt="image" src="https://github.com/user-attachments/assets/916899e1-488f-405b-aadc-5975e8912169" />
+
+I noticed how the top left of the screen basically told us what command the login screen was working, it fetched details from the 'user' table to validate login credentials. 
+
+I researched for more SQL payloads and after some tries I found that ` admin' -- ` worked and got me to round 2. 
+
+The .php link displayed ` Round2: or and like = -- ` . I then remembered that the LAST .php page had also displayed ``or``, which was not working. So the filter.php was in fact telling me what keywords to **not** use. Which made sense because ` admin' -- ` no longer seemed to work.
+
+After attempting a few prompts, `` admin'/* `` got me to the next level. This meant that the password was getting treated at as a command since it followed `/* `
+
+This one had the filters: ``Round3: or and = like > < --`` 
+
+This one required the prompt `` admin'; ``. I was basically terminating the command with this input and skipping the password. 
+
+Round 4 had the filters ``Round4: or and = like > < -- admin``, so even admin was blocked now, but statement termination still wasn't. I had to find a way to input admin by getting past the filter. After a little bit of research, I found that || can be used to concat commands, using which I was able to type 
+
+`admi'||'n';` which took me to the final round. This one blocked the union command ``Round5: or and = like > < -- union admin`` which I wasnt using anyways. Therefore `admi'||'n';` was accepted again and I was done with all the rounds.
+
+After this on visiting the filter page I was able to find the flag.
+
+<img width="1706" height="940" alt="image" src="https://github.com/user-attachments/assets/9495619a-34e1-4a8c-aefd-1bca2da4ce9f" />
+
+
+## Flag:
+
+```
+picoCTF{y0u_m4d3_1t_79a0ddc6}
+```
+
+## Concepts learnt:
+
+- I learned a little bit more about SQL like how /* can be used to add comments and || to concatenate.
+- I also realized how websites can have mutliple vulnerabilties under the surface despite having filters to protect them.
+
+## Notes:
+
+- I was curious why `UNION` was blocked in round 4 and after digging around I found that an alternative solution was to use the union statement along with (/**/)  to bypass filters. The (/**/) basically works like spaces so we can use this to effectively write out entire SQL commands. `UNION` on the other hand combines queries together. 
+- I also find it interesting that the prompt `` admi'||'n';`` is enough to bypass all the filters from round 1 to 5.
+
+## Resources:
+
+- https://www.geeksforgeeks.org/ethical-hacking/sql-injection-cheat-sheet/
+- https://portswigger.net/web-security/sql-injection/cheat-sheet
+
+***
+
+
+
 
 
 
